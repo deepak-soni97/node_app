@@ -1,6 +1,6 @@
 const express =  require('express');
 const PORT = 3000;
-const connection = require('./db/conn');
+const connectDB = require('./db/conn');
 const bodyParser = require('body-parser');
 const user  = require('./src/routes/user');
 
@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-connection();
+connectDB();
 
 app.use('/', user);
 

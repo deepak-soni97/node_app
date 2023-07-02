@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 
-async function connection(){
+const connectDB = async function connection(){
 
     try{
          mongoose.connect(mongoString,{
@@ -18,4 +18,4 @@ async function connection(){
     }
 } 
 
-module.exports = connection;
+module.exports = connectDB;
