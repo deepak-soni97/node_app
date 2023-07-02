@@ -9,9 +9,9 @@ const connectDB = async function connection(){
             useNewUrlParser:true,
             useUnifiedTopology:true, 
          }).then(() =>{
-            console.log("connection is successfully");
+            console.log("Connection has been established successfully");
          }).catch((e)=>{
-            console.log(e,"No Connection");
+            console.log("ECON: ", e);
          })
     }catch(error){
         console.log(error);
